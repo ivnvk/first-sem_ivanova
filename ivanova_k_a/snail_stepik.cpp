@@ -20,7 +20,7 @@ int main()
     int a,b,h;
     int n;
     cin>>h>>a>>b;
-    n = 1 +(h-b-1)/(a-b);
+    n = 1+(h-b-1)/(a-b);
     cout<<n<<endl;
     return 0;
 }
