@@ -8,7 +8,7 @@ int main() {
 		std::cin >> n >> k;
 		string s;
 		std::cin >> s;
-		bool ok = true;
+		bool w = true;
 		for (int i = 0; i < k; i++) {
 			char v = '-';
 			for (int j = i; j < n; j += k) {
@@ -23,24 +23,24 @@ int main() {
 				if (s[j] == '?')
 					s[j] = v;
 				else if (s[j] != v) {
-					ok = false;
+					w = false;
 					break;
 				}
 			}
-			if (!ok)
+			if (!w)
 				break;
 		}
-		if (!ok)
+		if (!w)
 			std::cout << "NO" << std::endl;
 		else {
-			int cnt[2] = {};
+			int a[2] = {};
 			for (int i = 0; i < k; i++) {
 				if (s[i] == '?')
 					continue;
-				cnt[s[i] - '0']++;
+				a[s[i] - '0']++;
 			}
-			int tmp = k - (cnt[0] + cnt[1]), tmp2 = tmp - abs(cnt[0] - cnt[1]);
-			if (tmp2 >= 0 && tmp2 % 2 == 0)
+			int f = k - (a[0] + a[1]), h = f - abs(a[0] - a[1]);
+			if (h >= 0 && h % 2 == 0)
 				std::cout << "YES" << std::endl;
 			else
 				std::cout << "NO" << std::endl;
