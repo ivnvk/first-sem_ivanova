@@ -10,7 +10,7 @@ int main() {
 			std::cin >> x;
 			c += x;
 		}
-		if (c > a) {
+		if (c>a) {
 			a = c;
 			t = i;
 		}
