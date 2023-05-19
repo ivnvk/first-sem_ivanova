@@ -1,0 +1,53 @@
+
+получать/задавать ширину(w) и высоту(h)
+ортоориентированные прямоугольники
+
+
+
+#include <iostream>
+#define WIDTH
+#define HEIGHT
+
+struct Data{
+	double x,y;
+};
+class Rectangle
+{
+	private:
+		Data vl;
+		Data np;
+	public:
+		Rectangle(Data v, Data n)
+		{
+			vl = v;
+			np = n;
+		}
+		double width()
+		{
+			return vl.x-np.x;
+		}
+		double  height()
+		{
+			return vl.y-np.y;
+		}
+		double raz()
+		{
+			return width() * height();
+		}
+
+};
+
+//int main()
+
+
+std::cin<<WIDTH;
+std::cin<<HEIGHT;
+int m = 2;
+int n = 2;
+float x = WIDTH* 0,5;
+float y = HEIGHT*0,5
+
+// Rectangle = ... ;
+//Square = ...;
+
+float [WIDTH][HEIGHT];//
